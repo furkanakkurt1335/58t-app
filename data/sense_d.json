@@ -1,0 +1,769 @@
+{
+    "people": [
+        {
+            "meta": {
+                "id": "people:1",
+                "uuid": "99f7319e-f25c-4191-9366-69a6df21f64e",
+                "sort": "160170700",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "people",
+                    "peopleless",
+                    "peoples"
+                ],
+                "offensive": false
+            },
+            "hom": 1,
+            "hwi": {
+                "hw": "peo*ple",
+                "prs": [
+                    {
+                        "mw": "ˈpē-pəl",
+                        "sound": {
+                            "audio": "people01",
+                            "ref": "c",
+                            "stat": "1"
+                        }
+                    }
+                ]
+            },
+            "fl": "noun",
+            "ins": [
+                {
+                    "il": "plural",
+                    "if": "people"
+                }
+            ],
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1",
+                                    "ins": [
+                                        {
+                                            "spl": "plural"
+                                        }
+                                    ],
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}human beings making up a group or assembly or linked by a common interest"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "ins": [
+                                        {
+                                            "spl": "plural"
+                                        }
+                                    ],
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|human beings||}, {sx|persons||} "
+                                        ],
+                                        [
+                                            "uns",
+                                            [
+                                                [
+                                                    [
+                                                        "text",
+                                                        "often used in compounds instead of {it}persons{/it} "
+                                                    ],
+                                                    [
+                                                        "vis",
+                                                        [
+                                                            {
+                                                                "t": "sales{it}people{/it}"
+                                                            }
+                                                        ]
+                                                    ]
+                                                ],
+                                                [
+                                                    [
+                                                        "text",
+                                                        "often used attributively "
+                                                    ],
+                                                    [
+                                                        "vis",
+                                                        [
+                                                            {
+                                                                "t": "{wi}people{/wi} skills"
+                                                            }
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "3",
+                                    "ins": [
+                                        {
+                                            "spl": "plural"
+                                        }
+                                    ],
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the members of a family or kinship"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "4",
+                                    "ins": [
+                                        {
+                                            "spl": "plural"
+                                        }
+                                    ],
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the mass of a community as distinguished from a special class "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "disputes between the {wi}people{/wi} and the nobles"
+                                                }
+                                            ]
+                                        ],
+                                        [
+                                            "uns",
+                                            [
+                                                [
+                                                    [
+                                                        "text",
+                                                        "often used by Communists to distinguish Communists from other people"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "5",
+                                    "ins": [
+                                        {
+                                            "il": "plural",
+                                            "if": "peo*ples"
+                                        }
+                                    ],
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a body of persons that are united by a common culture, tradition, or sense of kinship, that typically have common language, institutions, and beliefs, and that often constitute a politically organized group"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "6",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}lower animals usually of a specified kind or situation"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "7",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the body of enfranchised citizens of a state"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "uros": [
+                {
+                    "ure": "peo*ple*less",
+                    "prs": [
+                        {
+                            "mw": "ˈpē-pə(l)-ləs",
+                            "sound": {
+                                "audio": "people03",
+                                "ref": "c",
+                                "stat": "1"
+                            }
+                        }
+                    ],
+                    "fl": "adjective"
+                }
+            ],
+            "et": [
+                [
+                    "text",
+                    "Middle English {it}peple{/it}, from Anglo-French {it}pople, peple, peuple{/it}, from Latin {it}populus{/it}"
+                ]
+            ],
+            "date": "13th century{ds||1||}",
+            "shortdef": [
+                "human beings making up a group or assembly or linked by a common interest",
+                "human beings, persons —often used in compounds instead of persons —often used attributively",
+                "the members of a family or kinship"
+            ]
+        },
+        {
+            "meta": {
+                "id": "people:2",
+                "uuid": "033ef5cf-7639-4f2c-95c6-c855aaa9bb1b",
+                "sort": "160170800",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "people",
+                    "peopled",
+                    "peoples",
+                    "peopling"
+                ],
+                "offensive": false
+            },
+            "hom": 2,
+            "hwi": {
+                "hw": "people"
+            },
+            "fl": "verb",
+            "ins": [
+                {
+                    "if": "peo*pled"
+                },
+                {
+                    "if": "peo*pling",
+                    "prs": [
+                        {
+                            "mw": "ˈpē-p(ə-)liŋ",
+                            "sound": {
+                                "audio": "people02",
+                                "ref": "c",
+                                "stat": "1"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "def": [
+                {
+                    "vd": "transitive verb",
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to supply or fill with people"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to dwell in {bc}{sx|inhabit||}"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "et": [
+                [
+                    "text",
+                    "Middle English, from Anglo-French {it}popler, poeplier{/it}, from {it}pople{/it}"
+                ]
+            ],
+            "date": "15th century{ds||1||}",
+            "shortdef": [
+                "to supply or fill with people",
+                "to dwell in : inhabit"
+            ]
+        },
+        {
+            "meta": {
+                "id": "people mover",
+                "uuid": "07a6d8fa-cd7a-4729-8af1-105c3605da9f",
+                "sort": "160171000",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "people mover",
+                    "people movers"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "people mover"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}any of various rapid-transit systems (as of moving sidewalks or automated driverless cars) for shuttling people"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1968",
+            "shortdef": [
+                "any of various rapid-transit systems (as of moving sidewalks or automated driverless cars) for shuttling people"
+            ]
+        },
+        {
+            "meta": {
+                "id": "people pleaser",
+                "uuid": "7d943e48-db95-45dd-8381-96560bcb341e",
+                "sort": "160171050",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "people pleaser",
+                    "people pleasers",
+                    "people pleasing",
+                    "people-pleaser",
+                    "people-pleasers",
+                    "people-pleasing"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "people pleaser"
+            },
+            "vrs": [
+                {
+                    "vl": "or less commonly",
+                    "va": "peo*ple-pleas*er",
+                    "prs": [
+                        {
+                            "mw": "ˈpē-pəl-ˈplē-zər",
+                            "sound": {
+                                "audio": "people-pleaser_1",
+                                "ref": "owl",
+                                "stat": "1"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "fl": "noun",
+            "ins": [
+                {
+                    "il": "plural",
+                    "if": "people pleasers"
+                },
+                {
+                    "il": "also",
+                    "if": "peo*ple-pleas*ers"
+                }
+            ],
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}someone or something that pleases or wants to please people "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "a breed of dog that's a {wi}people pleaser{/wi}"
+                                                },
+                                                {
+                                                    "t": "This sophisticated, nutritious salad is a real {wi}people-pleaser{/wi}, and it's quite filling too.",
+                                                    "aq": {
+                                                        "auth": "Brett Stewart and Corey Irwin"
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                    ],
+                                    "sdsense": {
+                                        "sd": "often",
+                                        "dt": [
+                                            [
+                                                "text",
+                                                "{bc}a person who has an emotional need to please others often at the expense of his or her own needs or desires "
+                                            ],
+                                            [
+                                                "vis",
+                                                [
+                                                    {
+                                                        "t": "Being a {wi}people pleaser{/wi} isn't all bad. It shows that you are a caring person who values social connections and enjoys making others happy.",
+                                                        "aq": {
+                                                            "auth": "Samantha Boardman"
+                                                        }
+                                                    }
+                                                ]
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "uros": [
+                {
+                    "ure": "people-pleasing",
+                    "vrs": [
+                        {
+                            "vl": "or",
+                            "va": "people pleasing"
+                        }
+                    ],
+                    "fl": "noun",
+                    "utxt": [
+                        [
+                            "vis",
+                            [
+                                {
+                                    "t": "… if you grew up in a home with a difficult, emotionally unavailable parent, you may have unconsciously picked up the pattern of {wi}people-pleasing{/wi} in an attempt to engage the aloof parent.",
+                                    "aq": {
+                                        "auth": "Meghan Fritz"
+                                    }
+                                }
+                            ]
+                        ]
+                    ]
+                },
+                {
+                    "ure": "people-pleasing",
+                    "fl": "adjective",
+                    "utxt": [
+                        [
+                            "vis",
+                            [
+                                {
+                                    "t": "{wi}people-pleasing{/wi} behavior"
+                                },
+                                {
+                                    "t": "a {wi}people-pleasing{/wi} recipe"
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1550",
+            "shortdef": [
+                "someone or something that pleases or wants to please people; often : a person who has an emotional need to please others often at the expense of his or her own needs or desires"
+            ]
+        },
+        {
+            "meta": {
+                "id": "People's Republic of China:g",
+                "uuid": "cb002338-683c-4568-a969-4610b7205ecd",
+                "sort": "281694000",
+                "src": "collegiate",
+                "section": "geog",
+                "stems": [
+                    "People's Republic of China"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "People's Republic of China"
+            },
+            "fl": "geographical name",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{dx}see {dxt|china|China:g|}{/dx}"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "shortdef": []
+        },
+        {
+            "meta": {
+                "id": "people carrier",
+                "uuid": "19ddcf7d-1f5b-4137-8d9a-601ba92be139",
+                "sort": "3014535000",
+                "src": "ld",
+                "section": "idioms",
+                "stems": [
+                    "people carrier"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "people carrier"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sls": [
+                        "British"
+                    ],
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a small van {bc}minivan"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "shortdef": [
+                "a small van : minivan"
+            ]
+        },
+        {
+            "meta": {
+                "id": "people person",
+                "uuid": "980f14f6-5f72-4b62-9e4e-4929b6b4e417",
+                "sort": "3014537000",
+                "src": "ld",
+                "section": "idioms",
+                "stems": [
+                    "people person"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "people person"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}someone who enjoys being with or talking to other people"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "shortdef": [
+                "someone who enjoys being with or talking to other people"
+            ]
+        },
+        {
+            "meta": {
+                "id": "people skills",
+                "uuid": "dbc170eb-8ac5-4cb2-b390-e5f84b0f7bba",
+                "sort": "3014538000",
+                "src": "ld",
+                "section": "idioms",
+                "stems": [
+                    "people skills"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "people skills"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the ability to work with or talk to other people in an effective and friendly way"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "shortdef": [
+                "the ability to work with or talk to other people in an effective and friendly way"
+            ]
+        },
+        {
+            "meta": {
+                "id": "people who live in glass houses shouldn't throw stones",
+                "uuid": "5b4c61e2-e830-463c-984a-fb72c802742a",
+                "sort": "3014539000",
+                "src": "ld",
+                "section": "idioms",
+                "stems": [
+                    "people who live in glass houses shouldn't throw stones"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "people who live in glass houses shouldn't throw stones"
+            },
+            "fl": "idiom",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "uns",
+                                            [
+                                                [
+                                                    [
+                                                        "text",
+                                                        "used to say that people who have faults should not criticize other people for having the same faults"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "shortdef": [
+                "—used to say that people who have faults should not criticize other people for having the same faults"
+            ]
+        },
+        {
+            "meta": {
+                "id": "beautiful people",
+                "uuid": "716f1800-6b7d-47af-a335-dab613507089",
+                "sort": "020121700",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "beautiful people"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "beautiful people"
+            },
+            "fl": "plural noun",
+            "lbs": [
+                "often capitalized B&P"
+            ],
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}wealthy or famous people whose lifestyle is usually expensive and well-publicized"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1950",
+            "shortdef": [
+                "wealthy or famous people whose lifestyle is usually expensive and well-publicized"
+            ]
+        }
+    ]
+}
