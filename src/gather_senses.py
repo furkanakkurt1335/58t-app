@@ -12,7 +12,7 @@ with open(creds_file, 'r') as f:
         raise Exception('Please add your Merriam-Webster API key to the creds.json file.')
     api_key = data['api_key']
 
-noun_file = os.path.join(data_folder, '1525-freq-nouns.json')
+noun_file = os.path.join(data_folder, 'freq-nouns-coca.json')
 with open(noun_file, 'r') as f:
     noun_l = json.load(f)['entries']
 url = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/{word}?key={api_key}'
@@ -26,11 +26,22 @@ else:
 for noun in noun_l:
     if noun in sense_d.keys():
         continue
+    else:
+        sense_d[noun] = []
     req_url = url.format(word=noun, api_key=api_key)
     r = requests.get(req_url)
     if r.status_code == 200:
-        sense_d[noun] = r.json()
-    break
+        print(noun)
+        data = r.json()
+        for entry in data:
+            if entry['fl'] == 'noun':
+                sense_l = entry['def'][0]['sseq']
+                sense_count = len(sense_l)
+                sense_d[noun].append(sense_count)
+    else:
+        print('Error: {}'.format(r.status_code))
+        print('Noun: {}'.format(noun))
+        break
 
 with open(os.path.join(data_folder, 'sense_d.json'), 'w') as f:
     json.dump(sense_d, f, indent=4, ensure_ascii=False)
