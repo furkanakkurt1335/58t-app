@@ -3,7 +3,7 @@ Application project for CMPE58T
 
 ## References
 
-- Data at path
-  - `data/freq-nouns-coca.json` is taken from [wordfrequency.info](https://www.wordfrequency.info/samples.asp).
-  - `data/mw-entries.json` is taken from [merriam-webster.com](https://www.merriam-webster.com).
-  - `data/freq-nouns-talkenglish.json` is taken from [talkenglish.com](https://www.talkenglish.com/vocabulary/top-1500-nouns.aspx).
+- Data under the folder `data/` is taken from the following sources:
+  - `freq-nouns-coca.json`: [wordfrequency.info](https://www.wordfrequency.info/samples.asp).
+  - `mw-entries.json`: [merriam-webster.com](https://www.merriam-webster.com).
+  - `freq-nouns-talkenglish.json`: [talkenglish.com](https://www.talkenglish.com/vocabulary/top-1500-nouns.aspx).
