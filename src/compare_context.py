@@ -7,8 +7,9 @@ config = AutoConfig.from_pretrained('bert-base-uncased', output_hidden_states=Tr
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', config=config)
 model = BertModel.from_pretrained('bert-base-uncased', config=config)
 
-sentences = ['Count Ugolino has been imprisoned with his sons and grandsons to starve to death.', 'I have counted the number of times.', 'The count is in the millions.', 'The Count of Monte Cristo is a novel by Alexandre Dumas.']
-words = ['count', 'counted', 'count', 'count']
+sentences = ['I went to the bank to deposit my money.', 'The river bank was full of dead fishes.', 'The bank was closed since it was Sunday.', 'I went to the bank to withdraw my money.', 'I went to the bank to withdraw my money.']
+sentences = ['The river bank was full of dead fishes.', 'The bank was closed since it was Sunday.', 'I went to the bank to deposit my money.', 'I went to the bank to withdraw my money.']
+words = ['bank', 'bank', 'bank', 'bank']
 repr_l = []
 # Tokenize the input sequence
 for i, sentence in enumerate(sentences):
@@ -31,7 +32,7 @@ out_l = []
 for i, repr1 in enumerate(repr_l):
     for j, repr2 in enumerate(repr_l[i+1:]):
         dist = cosine(repr1['representation'], repr2['representation'])
-        out_l.append({'sent1': repr1['sentence'], 'sent2': repr2['sentence'], 'dist': dist})
-out_l.sort(key=lambda x: x['dist'])
+        out_l.append({'sent1': repr1['sentence'], 'sent2': repr2['sentence'], 'dist': dist, 'order': f'{i+1}-{j+i+2}'})
+out_l.sort(key=lambda x: x['order'])
 for out in out_l:
-    print('{dist:.4f}: "{sent1}" and "{sent2}"'.format(sent1=out['sent1'], sent2=out['sent2'], dist=out['dist']))
+    print('{order} {dist:.4f}: "{sent1}" and "{sent2}"'.format(sent1=out['sent1'], sent2=out['sent2'], dist=out['dist'], order=out['order']))
