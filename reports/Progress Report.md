@@ -30,7 +30,7 @@ I have experimented with manually created sentences which clearly have certain w
 
 ### Example
 
-- I have calculated the distances of the token `bank`'s embeddings between pairs of the following 3 sentences:
+- I have calculated the distances of the token `bank`'s embeddings between pairs of the following 4 sentences:
 	1. The river *bank* was full of dead fishes.
 	2. The *bank* was closed since it was Sunday.
 	3. I went to the *bank* to deposit my money.
