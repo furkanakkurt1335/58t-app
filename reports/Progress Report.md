@@ -7,7 +7,7 @@ Furkan Akkurt, 20 May
 - Libraries
 	- `transformers`<sup>2</sup>
 		- `BertTokenizer` and `BertModel` modules
-			- I average the last 4 layers in calculation of token representations (embeddings), as suggested by the authors of the BERT paper.<sup>5</sup>
+			- I average the last 4 layers in calculation of token representations (embeddings).
 		- `AutoConfig` module to get access to all the hidden states
 	- `torch`<sup>3</sup>
 		- Used in converting lists to tensors (`tensor` function) and creating a tensor of ones (`ones_like` function).
