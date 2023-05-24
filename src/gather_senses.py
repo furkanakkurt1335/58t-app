@@ -23,7 +23,7 @@ if os.path.exists(sense_path):
         sense_d = json.load(f)
 else:
     sense_d = {}
-for noun in noun_l:
+for i, noun in enumerate(noun_l):
     if noun in sense_d.keys():
         continue
     else:
@@ -31,17 +31,15 @@ for noun in noun_l:
     req_url = url.format(word=noun, api_key=api_key)
     r = requests.get(req_url)
     if r.status_code == 200:
-        print(noun)
         data = r.json()
-        for entry in data:
-            if entry['fl'] == 'noun':
-                sense_l = entry['def'][0]['sseq']
-                sense_count = len(sense_l)
-                sense_d[noun].append(sense_count)
+        sense_d[noun] = data
     else:
         print('Error: {}'.format(r.status_code))
         print('Noun: {}'.format(noun))
-        break
+    if i % 100 == 0:
+        print('Processed {} nouns.'.format(i))
+        with open(os.path.join(data_folder, 'sense_d.json'), 'w') as f:
+            json.dump(sense_d, f, indent=4, ensure_ascii=False)
 
 with open(os.path.join(data_folder, 'sense_d.json'), 'w') as f:
     json.dump(sense_d, f, indent=4, ensure_ascii=False)

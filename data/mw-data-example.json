@@ -1,0 +1,1579 @@
+{
+    "time": [
+        {
+            "meta": {
+                "id": "time:1",
+                "uuid": "d543ba4f-4856-43da-b42c-b668bcdd5eb0",
+                "sort": "200224200",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "at the same time",
+                    "at times",
+                    "for the time being",
+                    "from time to time",
+                    "in no time",
+                    "in time",
+                    "on time",
+                    "time",
+                    "time and again",
+                    "times"
+                ],
+                "offensive": false
+            },
+            "hom": 1,
+            "hwi": {
+                "hw": "time",
+                "prs": [
+                    {
+                        "mw": "ˈtīm",
+                        "sound": {
+                            "audio": "time0001",
+                            "ref": "c",
+                            "stat": "1"
+                        }
+                    }
+                ]
+            },
+            "fl": "noun",
+            "ins": [
+                {
+                    "il": "plural",
+                    "if": "times"
+                }
+            ],
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the measured or measurable period during which an action, process, or condition exists or continues {bc}{sx|duration||}"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a nonspatial continuum that is measured in terms of events which succeed one another from past through present to future"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "c",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|leisure||} "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "{wi}time{/wi} for reading"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the point or period when something occurs {bc}{sx|occasion||}"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "3 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}an appointed, fixed, or customary moment or hour for something to happen, begin, or end "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "arrived ahead of {wi}time{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}an opportune or suitable moment "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "decided it was {wi}time{/wi} to retire"
+                                                }
+                                            ]
+                                        ],
+                                        [
+                                            "uns",
+                                            [
+                                                [
+                                                    [
+                                                        "text",
+                                                        "often used in the phrase {it}about time{/it} "
+                                                    ],
+                                                    [
+                                                        "vis",
+                                                        [
+                                                            {
+                                                                "t": "about {wi}time{/wi} for a change"
+                                                            }
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "4 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a historical period {bc}{sx|age||}"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a division of geologic chronology"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "c",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}conditions at present or at some specified period "
+                                        ],
+                                        [
+                                            "uns",
+                                            [
+                                                [
+                                                    [
+                                                        "text",
+                                                        "usually used in plural "
+                                                    ],
+                                                    [
+                                                        "vis",
+                                                        [
+                                                            {
+                                                                "t": "{wi}times{/wi} are hard"
+                                                            },
+                                                            {
+                                                                "t": "move with the {wi}times{/wi}"
+                                                            }
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "d",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the present time "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "issues of the {wi}time{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "5 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|lifetime||}"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a period of apprenticeship"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "c",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a term of military service"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "d",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a prison sentence"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "6",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|season||} "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "very hot for this {wi}time{/wi} of year"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "7 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}rate of speed {bc}{sx|tempo||}"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the grouping of the beats of music {bc}{sx|rhythm||}"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "8 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a moment, hour, day, or year as indicated by a clock or calendar "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "what {wi}time{/wi} is it"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}any of various systems (such as a sidereal or solar system) of reckoning time"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "9 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}one of a series of recurring instances or repeated actions "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "you've been told many {wi}times{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sen",
+                                {
+                                    "sn": "b",
+                                    "ins": [
+                                        {
+                                            "if": "times",
+                                            "spl": "plural"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                "pseq",
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "(1)",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}added or accumulated quantities or instances "
+                                                ],
+                                                [
+                                                    "vis",
+                                                    [
+                                                        {
+                                                            "t": "five {wi}times{/wi} greater"
+                                                        }
+                                                    ]
+                                                ]
+                                            ]
+                                        }
+                                    ],
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "(2)",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}equal fractional parts of which an indicated number equal a comparatively greater quantity "
+                                                ],
+                                                [
+                                                    "vis",
+                                                    [
+                                                        {
+                                                            "t": "seven {wi}times{/wi} smaller"
+                                                        },
+                                                        {
+                                                            "t": "three {wi}times{/wi} closer"
+                                                        }
+                                                    ]
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "c",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|turn||} "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "three {wi}times{/wi} at bat"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "10",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}finite as contrasted with infinite duration"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "11",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a person's experience during a specified period or on a particular occasion "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "a good {wi}time{/wi}"
+                                                },
+                                                {
+                                                    "t": "a hard {wi}time{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "12 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the hours or days required to be occupied by one's work "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "make up {wi}time{/wi}"
+                                                },
+                                                {
+                                                    "t": "on company {wi}time{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}an hourly pay rate "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "straight {wi}time{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "c",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}wages paid at discharge or resignation "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "pick up your {wi}time{/wi} and get out"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "13 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}the playing time of a game"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|time-out||1}"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "14",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a period during which something is used or available for use "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "computer {wi}time{/wi}"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "dros": [
+                {
+                    "drp": "at the same time",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}{sx|nevertheless||}, {sx|yet||} "
+                                                ],
+                                                [
+                                                    "vis",
+                                                    [
+                                                        {
+                                                            "t": "slick and {it}at the same time{/it} strangely unprofessional",
+                                                            "aq": {
+                                                                "auth": "Gerald Weaks"
+                                                            }
+                                                        }
+                                                    ]
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "at times",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}at intervals {bc}{sx|occasionally||}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "for the time being",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}for the present"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "from time to time",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}once in a while {bc}{sx|occasionally||}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "in no time",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}very quickly or soon"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "in time",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "1",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}sufficiently early"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ],
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "2",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}{sx|eventually||}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ],
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "3",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}in correct tempo "
+                                                ],
+                                                [
+                                                    "vis",
+                                                    [
+                                                        {
+                                                            "t": "learn to play {it}in time{/it}"
+                                                        }
+                                                    ]
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "on time",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "1 a",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}at the appointed time"
+                                                ]
+                                            ]
+                                        }
+                                    ],
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "b",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}on schedule"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ],
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "sn": "2",
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}on the installment plan"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "drp": "time and again",
+                    "def": [
+                        {
+                            "sseq": [
+                                [
+                                    [
+                                        "sense",
+                                        {
+                                            "dt": [
+                                                [
+                                                    "text",
+                                                    "{bc}{sx|frequently||}, {sx|repeatedly||}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "dxnls": [
+                "see also {dxt|a race against time||}, {dxt|take one's time||}"
+            ],
+            "et": [
+                [
+                    "text",
+                    "Middle English, from Old English {it}tīma{/it}; akin to Old Norse {it}tīmi{/it} time, Old English {it}tīd{/it} {ma}{mat|tide:3|}{/ma}"
+                ]
+            ],
+            "date": "before 12th century{ds||1|a|}",
+            "shortdef": [
+                "the measured or measurable period during which an action, process, or condition exists or continues : duration",
+                "a nonspatial continuum that is measured in terms of events which succeed one another from past through present to future",
+                "leisure"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time:2",
+                "uuid": "1eceb4e1-d4a6-4b0d-93e8-d2605bce4a8e",
+                "sort": "200224300",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time",
+                    "timed",
+                    "times",
+                    "timing"
+                ],
+                "offensive": false
+            },
+            "hom": 2,
+            "hwi": {
+                "hw": "time"
+            },
+            "fl": "verb",
+            "ins": [
+                {
+                    "if": "timed"
+                },
+                {
+                    "if": "tim*ing"
+                }
+            ],
+            "def": [
+                {
+                    "vd": "transitive verb",
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to arrange or set the time of {bc}{sx|schedule||}"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to regulate (a watch) to keep correct time"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to set the tempo, speed, or duration of "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "{it}timed{/it} his leap perfectly",
+                                                    "aq": {
+                                                        "auth": "Neil Amdur"
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "3",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to cause to keep time with something"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "4",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to determine or record the time, duration, or rate of "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "{wi}time{/wi} a horse"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "5",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to dispose (something, such as a mechanical part) so that an action occurs at a desired instant or in a desired way"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                },
+                {
+                    "vd": "intransitive verb",
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}to keep or beat time"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "14th century{ds|t|1|a|}",
+            "shortdef": [
+                "to arrange or set the time of : schedule",
+                "to regulate (a watch) to keep correct time",
+                "to set the tempo, speed, or duration of"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time:3",
+                "uuid": "41864aa4-7b41-43f0-9c8b-9398c6395c77",
+                "sort": "200224400",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time"
+                ],
+                "offensive": false
+            },
+            "hom": 3,
+            "hwi": {
+                "hw": "time"
+            },
+            "fl": "adjective",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}of or relating to time"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}recording time"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{a_link|timed} to ignite or explode at a specific moment "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "a {wi}time{/wi} charge"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "3 a",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}payable on a specified future day or a certain length of time after presentation for acceptance "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "a {wi}time{/wi} draft"
+                                                },
+                                                {
+                                                    "t": "{wi}time{/wi} deposits"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "sense",
+                                {
+                                    "sn": "b",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}based on installment payments "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "a {wi}time{/wi} sale"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "circa 1711{ds||1|a|}",
+            "shortdef": [
+                "of or relating to time",
+                "recording time",
+                "timed to ignite or explode at a specific moment"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time and a half",
+                "uuid": "b911eb32-58f1-4b1d-b2a5-8a5e1846b265",
+                "sort": "200224500",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time and a half",
+                    "time and a halfs"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time and a half"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}payment for work (such as overtime or holiday work) at one and a half times the worker's regular wage rate"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1888",
+            "shortdef": [
+                "payment for work (such as overtime or holiday work) at one and a half times the worker's regular wage rate"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time bomb",
+                "uuid": "e77f58ac-2027-4b7b-8a7a-5ddb66af2f4b",
+                "sort": "200224600",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time bomb",
+                    "time bombs"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time bomb"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a bomb so made as to explode at a predetermined time"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}something with a potentially dangerous or detrimental delayed reaction"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1893{ds||1||}",
+            "shortdef": [
+                "a bomb so made as to explode at a predetermined time",
+                "something with a potentially dangerous or detrimental delayed reaction"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time capsule",
+                "uuid": "a4a5b374-6bf4-4955-9ceb-ebf46f438a6a",
+                "sort": "200224700",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time capsule",
+                    "time capsules"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time capsule"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a container holding historical records or objects representative of current culture that is deposited (as in a cornerstone) for preservation until discovery by some future age"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}something resembling a time capsule "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "sunken vessels are archaeological {it}time capsules{/it}",
+                                                    "aq": {
+                                                        "auth": "Philip Trupp"
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1938{ds||1||}",
+            "shortdef": [
+                "a container holding historical records or objects representative of current culture that is deposited (as in a cornerstone) for preservation until discovery by some future age",
+                "something resembling a time capsule"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time card",
+                "uuid": "f335ae67-33ed-4cd5-b18d-b3be53572d0d",
+                "sort": "200224800",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time card",
+                    "time cards"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time card"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a card used with a time clock to record an employee's starting and quitting times each day or on each job"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "circa 1891",
+            "shortdef": [
+                "a card used with a time clock to record an employee's starting and quitting times each day or on each job"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time chart",
+                "uuid": "694b2a6b-343b-4609-bb97-820f3cd14d78",
+                "sort": "200224900",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time chart",
+                    "time charts"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time chart"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a chart showing the standard times in various parts of the world with reference to a specified time at a specified place"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}{sx|time line||1}"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "circa 1930{ds||1||}",
+            "shortdef": [
+                "a chart showing the standard times in various parts of the world with reference to a specified time at a specified place",
+                "time line"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time clock",
+                "uuid": "f4a1ccaf-fbb7-4783-b43e-4af735b37ac7",
+                "sort": "200225000",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time clock",
+                    "time clocks"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time clock"
+            },
+            "fl": "noun",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}a clock that stamps starting and quitting times on an employee's time card"
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1887",
+            "shortdef": [
+                "a clock that stamps starting and quitting times on an employee's time card"
+            ]
+        },
+        {
+            "meta": {
+                "id": "time-consuming",
+                "uuid": "80f3024d-384f-4bab-8828-e549d71ac5b1",
+                "sort": "200225100",
+                "src": "collegiate",
+                "section": "alpha",
+                "stems": [
+                    "time-consuming"
+                ],
+                "offensive": false
+            },
+            "hwi": {
+                "hw": "time-con*sum*ing",
+                "prs": [
+                    {
+                        "mw": "ˈtīm-kən-ˈsü-miŋ",
+                        "sound": {
+                            "audio": "timeco01",
+                            "ref": "c",
+                            "stat": "1"
+                        }
+                    }
+                ]
+            },
+            "fl": "adjective",
+            "def": [
+                {
+                    "sseq": [
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "1",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}using or taking up a great deal of time "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "{wi}time-consuming{/wi} chores"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ],
+                        [
+                            [
+                                "sense",
+                                {
+                                    "sn": "2",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}wasteful of time "
+                                        ],
+                                        [
+                                            "vis",
+                                            [
+                                                {
+                                                    "t": "{wi}time-consuming{/wi} tactics"
+                                                }
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "date": "1600{ds||1||}",
+            "shortdef": [
+                "using or taking up a great deal of time",
+                "wasteful of time"
+            ]
+        }
+    ]
+}
