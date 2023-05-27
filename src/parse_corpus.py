@@ -21,14 +21,20 @@ print('Corpus loaded.')
 body_l = []
 line_start_pattern = re.compile(r'^@@\w*')
 for key, content in corpus_d.items():
-    for line in content.split('\n'):
+    for j, line in enumerate(content.split('\n')):
         line_start_search = line_start_pattern.search(line)
         if line_start_search:
             line_start = line_start_search.group()
             line = line[line_start_search.end():].strip()
             if len(line) == 0:
                 continue
-            body_l.append(line.strip())
+            for c in range(11, 1, -1):
+                at_l = ['@'] * c
+                at_s = ' '.join(at_l)
+                if at_s in line:
+                    line = line.replace(at_s, '@@@@@')
+            line_l = [i.strip().lower() for i in line.split('@@@@@')]
+            body_l.extend(line_l)
 
 print('Total lines:', len(body_l))
 
