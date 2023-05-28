@@ -12,6 +12,8 @@ count = 0
 for i, body in enumerate(body_l):
     if word in body:
         count += 1
+    if body.count(word) > 1:
+        print(body)
 
 print('Total lines:', len(body_l))
 print('Total lines with "{}": {}'.format(word, count))
