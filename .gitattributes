@@ -1,3 +1,4 @@
 data/coca.json filter=lfs diff=lfs merge=lfs -text
 data/now.json filter=lfs diff=lfs merge=lfs -text
 data/merged.json filter=lfs diff=lfs merge=lfs -text
+data/cleaned.json filter=lfs diff=lfs merge=lfs -text
