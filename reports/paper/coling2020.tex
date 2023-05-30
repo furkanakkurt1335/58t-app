@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage{coling2020}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage[super]{nth}
+\usepackage{color,soul}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{textcomp}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+
+\colingfinalcopy
+
+\title{Lexicographical Word-Sense Disambiguation}
+
+\author{Salih Furkan Akkurt \\
+  Boğaziçi University \\
+  Department of Computer Engineering \\
+  34342 Bebek, Istanbul, Turkey \\
+  {\tt furkan.akkurt@boun.edu.tr} \\}
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+  I publicly release the code and references in a repository~\cite{akkurt-2023-58t-app-repo}.
+\end{abstract}
+
+\section{Introduction}
+
+Dictionaries are great sources of information related to languages.
+They contain a lot of information regarding meanings (senses) of words.
+As language evolves, senses of words change and dictionaries need to be updated accordingly.
+Dictionary writers constantly work on manually detecting semantic changes in current usage.
+This is a very time-consuming and expensive process.
+
+In this work, I propose a method to automatically detect semantic changes in words by leveraging the contextualizing power of deep language models.
+I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in two corpora and cluster their contextualized representations to detect semantic changes.
+
+
+\blfootnote{
+    \hspace{-0.65cm}
+    This work is licensed under a Creative Commons
+    Attribution 4.0 International Licence.
+    Licence details: \url{http://creativecommons.org/licenses/by/4.0/}.
+}
+
+\section{System Description}
+
+\subsection{Data}
+
+I use 3 types of data in my work.
+The first type is a frequency list of words, the second a dictionary and the third corpora.
+
+Firstly, I use the frequency list of words from the Corpus of Contemporary American English (COCA)~\cite{english-corpora-2008-coca}.
+This list serves as my vocabulary which I use to detect semantic changes in.
+I restrict my vocabulary to nouns only.
+There are 2635 nouns in the list.
+
+Secondly, I use Merriam-Webster (MW)~\cite{mw-2023-dictionary} as my dictionary.
+Merriam-Webster is a well-known dictionary that is updated quite frequently.
+I have used its API~\cite{mw-2023-api} to get the sense counts of the words in my vocabulary.
+These counts serve two purposes: (1) to determine the semantic distance of the embeddings that is necessary for a sense distinction in dictionaries and (2) to, in the end, compare the sense counts of the words in the dictionary with the cluster counts of the word embeddings in the corpora.
+
+Lastly, I use free samples~\cite{corpus-data-2023-corpora} of the COCA and the NOW corpus (News on the Web)~\cite{english-corpora-2016-now} as my two corpora that serve as the current usage of the language.
+The COCA's sample has 8.9 million words of raw linear text and the one of the NOW's has 1.7 million words.
+Content of the COCA ranges from academic usage to fiction and spoken language.
+The NOW corpus is a collection of web-based news sources.
+Since the task is detecting current semantic changes, the corpora should be recent.
+
+\subsection{Method}
+
+I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in the two corpora and gather representations of each word.
+
+\section{Experimental Setup}
+
+\section{Results and Discussion}
+
+\subsection{Discussion}
+
+\section{Conclusion}
+
+\bibliographystyle{coling}
+\bibliography{coling2020}
+
+\end{document}
