@@ -129,7 +129,30 @@ Even though this is the case, I continued on to the next step of the method.
 \subsection{Semantic change detection with BERT and clustering}
 
 I have implemented the method described in the previous section completely and run it all the way through.
+Minimum cosine distance between any 2 clusters for all the embeddings of the entire vocabulary turns out to be $0.0645$.
+Using this minimum distance as the distance threshold, I have run the second clustering step.
+This step yielded 11,081 clusters for the word \textit{time}.
+The number of senses of the word \textit{time} in the dictionary is 23.
+This means that the minimum distance that compelled the dictionary writers to create different senses in the dictionary is not representative of the entire semantic space.
+If we use this small distance to cluster the embeddings, we end up with thousands of clusters for a single word, which is not useful for our purposes.
 
+I have generated 2 T-SNE plots of the contextualized representations of the word \textit{time} after the first and second clustering steps, labels coming from the agglomerative clustering algorithm.
+The first plot is shown in Figure~\ref{fig:time_1} and the second one in Figure~\ref{fig:time_2}.
+One conjecture is that the cosine distances 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{time_1.png}
+  \caption{The T-SNE plot of the contextualized representations of the word \textit{time} after the first clustering (number of clusters known) step.}
+  \label{fig:time_1}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{time_2.png}
+  \caption{The T-SNE plot of the contextualized representations of the word \textit{time} after the second clustering (distance threshold known) step.}
+  \label{fig:time_2}
+\end{figure}
 
 \section{Discussion and Conclusion}
 
