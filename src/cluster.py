@@ -19,6 +19,8 @@ elif cluster_type == 'agglo':
     with open(min_dist_path, 'r') as f:
         min_dist_d = json.load(f)
     min_dist = min_dist_d['min']
+    min_max_dist = min_dist_d['min_max']
+    max_dist = min_dist_d['max']
 
 entry_path = os.path.join(data_path, 'sense_count_d.json')
 with open(entry_path, 'r') as f:
@@ -62,7 +64,7 @@ for word in words:
         print('Mean distance:', mean_distance)
         cluster_d[word] = {'min': min_distance, 'max': max_distance, 'mean': mean_distance}
     elif cluster_type == 'agglo':
-        agglo = AgglomerativeClustering(distance_threshold=min_dist, n_clusters=None).fit(data[word])
+        agglo = AgglomerativeClustering(distance_threshold=min_max_dist, n_clusters=None, affinity='cosine', linkage='average').fit(data[word])
         cluster_count = len(set(agglo.labels_))
         print('Cluster count:', cluster_count)
         cluster_d[word] = cluster_count

@@ -14,9 +14,13 @@ max_dist_l = [(cluster_d[word]['max'], word) for word in cluster_d]
 max_dist_l.sort()
 min_max_dist = max_dist_l[0][0]
 print(max_dist_l[:10])
+max_dist_l.reverse()
+max_dist = max_dist_l[0][0]
+print(max_dist_l[:10])
 
 print('Min distance:', min_dist)
 print('Min max distance:', min_max_dist)
+print('Max distance:', max_dist)
 # for t in dist_l[:10]:
 #     dist, word = t
 #     print('{} {:.4f}'.format(word, dist))
@@ -32,4 +36,4 @@ print('Min max distance:', min_max_dist)
 # move 0.0428
 
 with open(os.path.join(data_path, 'min-dist.json'), 'w') as f:
-    json.dump({'min': min_dist, 'min_max': min_max_dist}, f, indent=4)
+    json.dump({'min': min_dist, 'min_max': min_max_dist, 'max': max_dist}, f, indent=4)
