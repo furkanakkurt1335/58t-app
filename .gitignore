@@ -1,0 +1,10 @@
+# slurm
+outs/
+
+# data
+repr_d-rounded/
+
+# paper
+*.aux
+*.log
+*.pdf
