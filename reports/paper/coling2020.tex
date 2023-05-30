@@ -62,8 +62,10 @@ There are 2635 nouns in the list.
 
 Secondly, I use Merriam-Webster (MW)~\cite{mw-2023-dictionary} as my dictionary.
 Merriam-Webster is a well-known dictionary that is updated quite frequently.
+I have used its API~\cite{mw-2023-api} to get the sense counts of the words in my vocabulary.
+These counts serve two purposes: (1) to determine the semantic distance of the embeddings that is necessary for a sense distinction in dictionaries and (2) to, in the end, compare the sense counts of the words in the dictionary with the cluster counts of the word embeddings in the corpora.
 
-I use free samples of the COCA and the NOW corpus (News on the Web)~\cite{english-corpora-2016-now} as my two corpora that serve as the current usage of the language.
+Lastly, I use free samples~\cite{corpus-data-2023-corpora} of the COCA and the NOW corpus (News on the Web)~\cite{english-corpora-2016-now} as my two corpora that serve as the current usage of the language.
 The COCA's sample has 8.9 million words of raw linear text and the one of the NOW's has 1.7 million words.
 Content of the COCA ranges from academic usage to fiction and spoken language.
 The NOW corpus is a collection of web-based news sources.
