@@ -30,7 +30,7 @@ for i, repr_file in enumerate(repr_files):
         data[word].extend(d_t[word])
 
 for word in words:
-    if word in cluster_d:
+    if word in cluster_d or not data[word] or entry_d[word] < 1:
         continue
     print('Word:', word)
     kmeans = KMeans(n_clusters=entry_d[word], random_state=0, n_init="auto").fit(data[word])
