@@ -64,11 +64,11 @@ There are 2635 nouns in the list.
 
 Secondly, I use Merriam-Webster (MW)~\cite{mw-2023-dictionary} as my dictionary.
 Merriam-Webster is a well-known dictionary that is updated quite frequently.
-I have used its API~\cite{mw-2023-api} to get the sense counts of the words in my vocabulary.
-These counts serve two purposes: (1) to determine the semantic distance of the embeddings that is necessary for a sense distinction in dictionaries and (2) to, in the end, compare the sense counts of the words in the dictionary with the cluster counts of the word embeddings in the corpora.
+I have used its API~\cite{mw-2023-api} to get the number of senses of the words in my vocabulary.
+These counts serve two purposes: (1) to determine the semantic distance of the embeddings that is necessary for a sense distinction in dictionaries and (2) to, in the end, compare the number of senses of the words in the dictionary with the cluster counts of the word embeddings in the corpora.
 
 Lastly, I use free samples~\cite{corpus-data-2023-corpora} of the COCA and the NOW corpus (News on the Web)~\cite{english-corpora-2016-now} as my two corpora that serve as the current usage of the language.
-The COCA's sample has 8.9 million words of raw linear text and the one of the NOW's has 1.7 million words.
+The COCA's sample has 8.9 million words of linear tokenized text and the one of the NOW's has 1.7 million words.
 Content of the COCA ranges from academic usage to fiction and spoken language.
 The NOW corpus is a collection of web-based news sources.
 Since the task is detecting current semantic changes, the corpora should be recent.
@@ -86,8 +86,19 @@ Experiments showed that the rounding operation does not affect the results signi
 
 After the contextualization step, the agglomerative clustering algorithm~\cite{florek1951liaison} is used to cluster the representations of each word.
 The implementation of the algorithm on scikit-learn~\cite{scikit-learn} requires the number of clusters or the distance threshold to be specified.
-I use the sense counts of the words in the dictionary as the number of clusters input to the algorithm.
+I use the number of senses of the words in the dictionary as the number of clusters input to the algorithm.
 The cosine distance metric is used to calculate the distances between these clusters.
+The minimum distance between the clusters is then used as the distance threshold in the second clustering step.
+This distance represents the semantic distance that compelled the dictionary writers to distinguish the senses of the word.
+
+The second clustering step is the same with the first one except the distance threshold is used instead of the number of clusters.
+This step is used to create new clusters without specifically knowing the number of clusters beforehand but the distance threshold.
+In the agglomerative clustering algorithm, the distance threshold is the maximum distance between two clusters to be merged.
+In the end, the number of clusters is the number of senses of the word represented in the corpora.
+
+If the number of clusters of the second clustering is greater than the number of senses of the word in the dictionary, it means that the word has gained a new sense.
+If the number of clusters is less than the number of senses of the word, it means that the word has lost a sense.
+However, if the number of clusters is equal to the number of senses of the word, it does not mean that the word has not changed semantically, as it may have gained a sense and lost another at the same time.
 
 \section{Experimental Setup}
 
