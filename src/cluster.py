@@ -2,12 +2,13 @@ import os, json, argparse
 import numpy as np
 from sklearn.metrics.pairwise import cosine_distances
 from sklearn.cluster import AgglomerativeClustering
+import pickle
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(THIS_FOLDER, '../data')
 
 parser = argparse.ArgumentParser(description='Cluster words')
-parser.add_argument('--type', type=str, default='kmeans', help='Type of clustering', required=True)
+parser.add_argument('--type', type=str, default='n_clusters', help='Type of clustering', required=True)
 args = parser.parse_args()
 cluster_type = args.type
 cluster_path = ''
@@ -32,21 +33,29 @@ words = list(entry_d.keys())
 
 repr_d_path = os.path.join(data_path, 'repr_d-rounded')
 repr_files = [i for i in os.listdir(repr_d_path) if i.endswith('.json')]
+repr_pkl_path = os.path.join(data_path, 'repr_d-rounded.pkl')
+if os.path.exists(repr_pkl_path):
+    with open(repr_pkl_path, 'rb') as f:
+        data = pickle.load(f)
+else:
+    data = {}
+    for i, repr_file in enumerate(repr_files):
+        print('File:', i)
+        with open(os.path.join(repr_d_path, repr_file)) as f:
+            d_t = json.load(f)
+        for word in d_t:
+            if word not in data:
+                data[word] = []
+            data[word].extend(d_t[word])
+    with open(repr_pkl_path, 'wb') as f:
+        pickle.dump(data, f)
+        print('Pickle dumped')
 
 if os.path.exists(cluster_path):
     with open(cluster_path) as f:
         cluster_d = json.load(f)
 else:
     cluster_d = {}
-data = {}
-for i, repr_file in enumerate(repr_files):
-    print('File:', i)
-    with open(os.path.join(repr_d_path, repr_file)) as f:
-        d_t = json.load(f)
-    for word in d_t:
-        if word not in data:
-            data[word] = []
-        data[word].extend(d_t[word])
 
 for word in words:
     if word in cluster_d or not data[word] or entry_d[word] < 1:
