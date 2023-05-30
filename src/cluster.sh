@@ -8,7 +8,7 @@
 #SBATCH --mem=200GB
 #SBATCH -t 14-00:00
 
-/clusterusers/furkan.akkurt@boun.edu.tr/58t-app/.venv/bin/python3 /clusterusers/furkan.akkurt@boun.edu.tr/58t-app/src/cluster.py
+/clusterusers/furkan.akkurt@boun.edu.tr/58t-app/.venv/bin/python3 /clusterusers/furkan.akkurt@boun.edu.tr/58t-app/src/cluster.py --type $1
 
 RET=$?
 

@@ -27,3 +27,6 @@ for t in dist_l[:10]:
 # pie 0.0424
 # approach 0.0427
 # move 0.0428
+
+with open(os.path.join(data_path, 'min-dist.json'), 'w') as f:
+    json.dump({'min': dist_l[0][0]}, f)
