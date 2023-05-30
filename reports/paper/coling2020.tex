@@ -13,13 +13,14 @@
 
 \colingfinalcopy
 
-\title{Lexicographical Word-Sense Disambiguation}
+\title{Lexicographical Semantic Change Detection with BERT}
 
 \author{Salih Furkan Akkurt \\
   Boğaziçi University \\
   Department of Computer Engineering \\
   34342 Bebek, Istanbul, Turkey \\
-  {\tt furkan.akkurt@boun.edu.tr} \\}
+  {\tt furkan.akkurt@boun.edu.tr}
+}
 
 \date{}
 
@@ -33,13 +34,14 @@
 
 Dictionaries are great sources of information related to languages.
 They contain a lot of information regarding meanings (senses) of words.
-As language evolves, senses of words change and dictionaries need to be updated accordingly.
+As a language evolves, senses of its words change and dictionaries need to be updated accordingly.
 Dictionary writers constantly work on manually detecting semantic changes in current usage.
 This is a very time-consuming and expensive process.
 
-In this work, I propose a method to automatically detect semantic changes in words by leveraging the contextualizing power of deep language models.
+In this work, I propose a method to automatically detect semantic changes in words by leveraging the contextualizing power of deep learning-based language models.
 I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in two corpora and cluster their contextualized representations to detect semantic changes.
-
+The current proposed method in this paper does not detect if a sense of a word morphed into another sense but detects if a word has gained a new sense or lost one.
+This method can be extended into detecting morphing of senses also.
 
 \blfootnote{
     \hspace{-0.65cm}
@@ -73,7 +75,19 @@ Since the task is detecting current semantic changes, the corpora should be rece
 
 \subsection{Method}
 
-I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in the two corpora and gather representations of each word.
+Firstly, the two corpora is merged into one.
+When a given sentence is passed through BERT, each token of the sentence has its own contextual representation, as demonstrated by~\cite{pasini-etal-2020-clubert}.
+I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in the merged corpus and gather token representations of each word.
+After this step, each word has its own sets of representations.
+\cite{zhou-li-2020-temporalteller} used "the sum of the last 4 layers [of BERT] to encode both word meaning and context information".
+Instead of summation, each representation is the concatenation of the last 4 layers of BERT's output in this work.
+The representations are stored after a rounding operation to reduce the size of the data as the concatenation increases the size of the data by 4 times as opposed to summation.
+Experiments showed that the rounding operation does not affect the results significantly.
+
+After the contextualization step, the agglomerative clustering algorithm~\cite{florek1951liaison} is used to cluster the representations of each word.
+The implementation of the algorithm on scikit-learn~\cite{scikit-learn} requires the number of clusters or the distance threshold to be specified.
+I use the sense counts of the words in the dictionary as the number of clusters input to the algorithm.
+The cosine distance metric is used to calculate the distances between these clusters.
 
 \section{Experimental Setup}
 
