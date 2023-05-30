@@ -1,5 +1,5 @@
 import os, json, argparse
-from sklearn.metrics.pairwise import cosine_distances
+import numpy as np
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(THIS_FOLDER, '../data')
@@ -10,20 +10,20 @@ args = parser.parse_args()
 cluster_type = args.type
 if cluster_type == 'kmeans':
     from sklearn.cluster import KMeans
-    cluster_path = os.path.join(data_path, 'cluster_min_distances.json')
+    from sklearn.metrics.pairwise import cosine_distances
+    cluster_path = os.path.join(data_path, 'cluster_distances.json')
 elif cluster_type == 'agglo':
     from sklearn.cluster import AgglomerativeClustering
     cluster_path = os.path.join(data_path, 'cluster_counts.json')
+    min_dist_path = os.path.join(data_path, 'min-dist.json')
+    with open(min_dist_path, 'r') as f:
+        min_dist_d = json.load(f)
+    min_dist = min_dist_d['min']
 
 entry_path = os.path.join(data_path, 'sense_count_d.json')
 with open(entry_path, 'r') as f:
     entry_d = json.load(f)
 words = list(entry_d.keys())
-
-min_dist_path = os.path.join(data_path, 'min-dist.json')
-with open(min_dist_path, 'r') as f:
-    min_dist_d = json.load(f)
-min_dist = min_dist_d['min']
 
 repr_d_path = os.path.join(data_path, 'repr_d-rounded')
 repr_files = [i for i in os.listdir(repr_d_path) if i.endswith('.json')]
@@ -50,13 +50,17 @@ for word in words:
     if cluster_type == 'kmeans':
         kmeans = KMeans(n_clusters=entry_d[word], random_state=0, n_init="auto").fit(data[word])
         distances = cosine_distances(kmeans.cluster_centers_)
-        min_distance = 1
-        for distance in distances:
-            for el in distance:
-                if el != 0 and el < min_distance:
-                    min_distance = el
+        flat_arr = np.triu(distances).flatten()
+        flat_arr = np.delete(flat_arr, np.where(flat_arr == 0))
+        if len(flat_arr) < 1:
+            continue
+        min_distance = np.min(flat_arr)
         print('Min distance:', min_distance)
-        cluster_d[word] = min_distance
+        max_distance = np.max(flat_arr)
+        print('Max distance:', max_distance)
+        mean_distance = np.mean(flat_arr)
+        print('Mean distance:', mean_distance)
+        cluster_d[word] = {'min': min_distance, 'max': max_distance, 'mean': mean_distance}
     elif cluster_type == 'agglo':
         agglo = AgglomerativeClustering(distance_threshold=min_dist, n_clusters=None).fit(data[word])
         cluster_count = len(set(agglo.labels_))
