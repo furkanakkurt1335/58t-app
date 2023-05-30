@@ -1,4 +1,4 @@
-import os, json, psutil
+import os, json
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_distances
 
