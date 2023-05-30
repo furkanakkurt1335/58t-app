@@ -1,8 +1,9 @@
-import os, json, argparse
+import os, json, argparse, pickle
 import numpy as np
 from sklearn.metrics.pairwise import cosine_distances
 from sklearn.cluster import AgglomerativeClustering
-import pickle
+from matplotlib import pyplot as plt
+from sklearn.manifold import TSNE
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(THIS_FOLDER, '../data')
@@ -31,25 +32,14 @@ with open(entry_path, 'r') as f:
     entry_d = json.load(f)
 words = list(entry_d.keys())
 
-repr_d_path = os.path.join(data_path, 'repr_d-rounded')
-repr_files = [i for i in os.listdir(repr_d_path) if i.endswith('.json')]
 repr_pkl_path = os.path.join(data_path, 'repr_d-rounded.pkl')
 if os.path.exists(repr_pkl_path):
     with open(repr_pkl_path, 'rb') as f:
         data = pickle.load(f)
+        print('Pickle loaded')
 else:
-    data = {}
-    for i, repr_file in enumerate(repr_files):
-        print('File:', i)
-        with open(os.path.join(repr_d_path, repr_file)) as f:
-            d_t = json.load(f)
-        for word in d_t:
-            if word not in data:
-                data[word] = []
-            data[word].extend(d_t[word])
-    with open(repr_pkl_path, 'wb') as f:
-        pickle.dump(data, f)
-        print('Pickle dumped')
+    print('Pickle doesn\'t exist')
+    exit()
 
 if os.path.exists(cluster_path):
     with open(cluster_path) as f:
@@ -58,11 +48,11 @@ else:
     cluster_d = {}
 
 for word in words:
-    if word in cluster_d or not data[word] or entry_d[word] < 1:
-        continue
+    # if word in cluster_d or not data[word] or entry_d[word] < 1:
+    #     continue
     print('Word:', word)
+    arr = np.array([data[word][i]['representation'] for i in range(len(data[word]))])
     if cluster_type == 'n_clusters':
-        arr = np.array(data[word])
         agglo = AgglomerativeClustering(n_clusters=entry_d[word], metric='cosine', linkage='average', compute_distances=True).fit(arr)
         labels = agglo.labels_
         d = {i: np.array([]) for i in range(agglo.n_clusters_)}
@@ -74,17 +64,26 @@ for word in words:
         flat_arr = np.delete(flat_arr, np.where(flat_arr == 0))
         if len(flat_arr) < 1:
             continue
-        min_distance = np.min(flat_arr)
+        min_distance = np.min(flat_arr).item()
         print('Min distance:', min_distance)
-        max_distance = np.max(flat_arr)
+        max_distance = np.max(flat_arr).item()
         print('Max distance:', max_distance)
-        mean_distance = np.mean(flat_arr)
+        mean_distance = np.mean(flat_arr).item()
         print('Mean distance:', mean_distance)
         cluster_d[word] = {'min': min_distance, 'max': max_distance, 'mean': mean_distance}
     elif cluster_type == 'distance':
-        agglo = AgglomerativeClustering(distance_threshold=min_dist, n_clusters=None, metric='cosine', linkage='average').fit(data[word])
+        print('Calculating clusters')
+        agglo = AgglomerativeClustering(distance_threshold=min_dist, n_clusters=None, metric='cosine', linkage='average').fit(arr)
+        labels = agglo.labels_
         cluster_count = agglo.n_clusters_
         print('Cluster count:', cluster_count)
         cluster_d[word] = cluster_count
+    # print('Plotting')
+    # X_embedded = TSNE(n_components=2, metric='cosine').fit_transform(arr)
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
+    # ax.scatter(X_embedded[:, 0], X_embedded[:, 1], c=labels, cmap='tab20')
+    # plt.title(word)
+    # plt.savefig(os.path.join(data_path, 'cluster-plot-{}.png'.format(word)))
     with open(cluster_path, 'w') as f:
         json.dump(cluster_d, f)

@@ -1,3 +1,6 @@
+# big files
+*.pkl
+
 # editor
 .vscode/
 
