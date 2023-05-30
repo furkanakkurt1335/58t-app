@@ -38,7 +38,8 @@ Dictionary writers constantly work on manually detecting semantic changes in cur
 This is a very time-consuming and expensive process.
 
 In this work, I propose a method to automatically detect semantic changes in words by leveraging the contextualizing power of deep language models.
-I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in a corpus and compare their contextualized representations to detect semantic changes.
+I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in two corpora and cluster their contextualized representations to detect semantic changes.
+
 
 \blfootnote{
     \hspace{-0.65cm}
@@ -51,10 +52,26 @@ I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in a corpus and c
 
 \subsection{Data}
 
-I use free samples of the Corpus of Contemporary American English (COCA)~\cite{english-corpora-2008-coca} and the NOW corpus (News on the Web)~\cite{english-corpora-2016-now} as my two corpora.
-The COCA's sample has 8.9 million words and NOW has 1.7 million words.
-Its content ranges from academic usage to fiction and spoken language.
-Since the task is detecting current semantic changes, the corpus should be recent.
+I use 3 types of data in my work.
+The first type is a frequency list of words, the second a dictionary and the third corpora.
+
+Firstly, I use the frequency list of words from the Corpus of Contemporary American English (COCA)~\cite{english-corpora-2008-coca}.
+This list serves as my vocabulary which I use to detect semantic changes in.
+I restrict my vocabulary to nouns only.
+There are 2635 nouns in the list.
+
+Secondly, I use Merriam-Webster (MW)~\cite{mw-2023-dictionary} as my dictionary.
+Merriam-Webster is a well-known dictionary that is updated quite frequently.
+
+I use free samples of the COCA and the NOW corpus (News on the Web)~\cite{english-corpora-2016-now} as my two corpora that serve as the current usage of the language.
+The COCA's sample has 8.9 million words of raw linear text and the one of the NOW's has 1.7 million words.
+Content of the COCA ranges from academic usage to fiction and spoken language.
+The NOW corpus is a collection of web-based news sources.
+Since the task is detecting current semantic changes, the corpora should be recent.
+
+\subsection{Method}
+
+I use BERT~\cite{devlin-etal-2019-bert} to contextualize words in the two corpora and gather representations of each word.
 
 \section{Experimental Setup}
 

@@ -6,5 +6,9 @@ repr_d-rounded/
 
 # paper
 *.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
 *.log
 *.pdf
