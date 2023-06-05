@@ -1,14 +1,11 @@
-# big files
-*.pkl
+# python
+.venv/
 
 # editor
 .vscode/
 
 # slurm
 outs/
-
-# data
-repr_d-rounded/
 
 # paper
 *.aux

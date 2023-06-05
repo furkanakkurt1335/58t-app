@@ -32,14 +32,13 @@ with open(entry_path, 'r') as f:
     entry_d = json.load(f)
 words = list(entry_d.keys())
 
-repr_pkl_path = os.path.join(data_path, 'repr_d-rounded.pkl')
-if os.path.exists(repr_pkl_path):
-    with open(repr_pkl_path, 'rb') as f:
-        data = pickle.load(f)
+repr_pkl_dir = os.path.join(data_path, 'repr_d-rounded')
+data = {}
+pkl_files = os.listdir(repr_pkl_dir)
+for pkl_file in pkl_files:
+    with open(os.path.join(repr_pkl_dir, pkl_file), 'rb') as f:
+        data.update(pickle.load(f))
         print('Pickle loaded')
-else:
-    print('Pickle doesn\'t exist')
-    exit()
 
 if os.path.exists(cluster_path):
     with open(cluster_path) as f:
