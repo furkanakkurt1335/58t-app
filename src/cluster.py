@@ -9,7 +9,7 @@ THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(THIS_FOLDER, '../data')
 
 parser = argparse.ArgumentParser(description='Cluster words')
-parser.add_argument('--type', type=str, default='n_clusters', help='Type of clustering', required=True)
+parser.add_argument('-t', '--type', type=str, default='n_clusters', help='Type of clustering', required=True)
 args = parser.parse_args()
 cluster_type = args.type
 cluster_path = ''
@@ -40,12 +40,16 @@ for pkl_file in pkl_files:
         data.update(pickle.load(f))
         print('Pickle loaded')
 
+data_len = len(data)
+print('Data length:', data_len)
+
 if os.path.exists(cluster_path):
     with open(cluster_path) as f:
         cluster_d = json.load(f)
 else:
     cluster_d = {}
 
+words = ['people']
 for word in words:
     # if word in cluster_d or not data[word] or entry_d[word] < 1:
     #     continue
@@ -77,12 +81,15 @@ for word in words:
         cluster_count = agglo.n_clusters_
         print('Cluster count:', cluster_count)
         cluster_d[word] = cluster_count
-    # print('Plotting')
-    # X_embedded = TSNE(n_components=2, metric='cosine').fit_transform(arr)
-    # fig = plt.figure()
-    # ax = fig.add_subplot(111)
-    # ax.scatter(X_embedded[:, 0], X_embedded[:, 1], c=labels, cmap='tab20')
-    # plt.title(word)
-    # plt.savefig(os.path.join(data_path, 'cluster-plot-{}.png'.format(word)))
+    print('Plotting')
+    X_embedded = TSNE(n_components=2, metric='cosine').fit_transform(arr)
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.scatter(X_embedded[:, 0], X_embedded[:, 1], c=labels, cmap='tab20')
+    plt.title(word)
+    im_dir = os.path.join(data_path, 'cluster-plot_tsne')
+    if not os.path.exists(im_dir):
+        os.mkdir(im_dir)
+    plt.savefig(os.path.join(im_dir, '{}-{}.png'.format(word, cluster_type)))
     with open(cluster_path, 'w') as f:
         json.dump(cluster_d, f)
