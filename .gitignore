@@ -7,13 +7,6 @@
 # slurm
 outs/
 
-# large data
-data/coca.json
-data/now.json
-data/merged.json
-data/cleaned.json
-repr_d-rounded/
-
 # paper
 *.aux
 *.bbl
