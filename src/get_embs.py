@@ -40,7 +40,7 @@ for i, id_t in enumerate(id_l):
             repr = np.sum(token_representations, axis=0)
             rounded_repr = np.round(repr, 4)
             repr_d[token].append({'body_id': id_t, 'representation': repr})
-    
+
     if i % 100 == 0:
         print('Line:', i)
         print('Remaining:', len(id_l) - i)

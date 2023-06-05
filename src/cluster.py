@@ -8,6 +8,10 @@ from sklearn.manifold import TSNE
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(THIS_FOLDER, '../data')
 
+body_path = os.path.join(data_path, 'cleaned.json')
+with open(body_path, 'r') as f:
+    body_d = json.load(f)
+
 parser = argparse.ArgumentParser(description='Cluster words')
 parser.add_argument('-t', '--type', type=str, default='n_clusters', help='Type of clustering', required=True)
 args = parser.parse_args()
@@ -43,24 +47,24 @@ for pkl_file in pkl_files:
 data_len = len(data)
 print('Data length:', data_len)
 
-if os.path.exists(cluster_path):
-    with open(cluster_path) as f:
-        cluster_d = json.load(f)
-else:
-    cluster_d = {}
+# if os.path.exists(cluster_path):
+#     with open(cluster_path) as f:
+#         cluster_d = json.load(f)
+# else:
+#     cluster_d = {}
 
 words = ['people']
 for word in words:
     # if word in cluster_d or not data[word] or entry_d[word] < 1:
     #     continue
     print('Word:', word)
-    arr = np.array([data[word][i]['representation'] for i in range(len(data[word]))])
+    repr_arr = np.array([data[word][i]['representation'] for i in range(len(data[word]))])
     if cluster_type == 'n_clusters':
-        agglo = AgglomerativeClustering(n_clusters=entry_d[word], metric='cosine', linkage='average', compute_distances=True).fit(arr)
+        agglo = AgglomerativeClustering(n_clusters=entry_d[word], metric='cosine', linkage='average', compute_distances=True).fit(repr_arr)
         labels = agglo.labels_
         d = {i: np.array([]) for i in range(agglo.n_clusters_)}
         for i in set(labels):
-            d[i] = arr[labels == i]
+            d[i] = repr_arr[labels == i]
         center_d = {i: np.mean(d[i], axis=0) for i in d}
         distances = cosine_distances(np.array(list(center_d.values())))
         flat_arr = np.triu(distances).flatten()
@@ -73,16 +77,26 @@ for word in words:
         print('Max distance:', max_distance)
         mean_distance = np.mean(flat_arr).item()
         print('Mean distance:', mean_distance)
-        cluster_d[word] = {'min': min_distance, 'max': max_distance, 'mean': mean_distance}
+        # cluster_d[word] = {'min': min_distance, 'max': max_distance, 'mean': mean_distance}
     elif cluster_type == 'distance':
         print('Calculating clusters')
-        agglo = AgglomerativeClustering(distance_threshold=min_dist, n_clusters=None, metric='cosine', linkage='average').fit(arr)
+        agglo = AgglomerativeClustering(distance_threshold=min_dist, n_clusters=None, metric='cosine', linkage='average').fit(repr_arr)
         labels = agglo.labels_
+        ex_count = 10 if len(labels) > 10 else len(labels)
+        labels_shown = set()
+        for i, label in enumerate(labels):
+            if label in labels_shown:
+                continue
+            body_id = data[word][i]['body_id']
+            print('Example:', body_d[body_id])
+            labels_shown.add(label)
+            if len(labels_shown) >= ex_count:
+                break
         cluster_count = agglo.n_clusters_
         print('Cluster count:', cluster_count)
-        cluster_d[word] = cluster_count
+        # cluster_d[word] = cluster_count
     print('Plotting')
-    X_embedded = TSNE(n_components=2, metric='cosine').fit_transform(arr)
+    X_embedded = TSNE(n_components=2, metric='cosine').fit_transform(repr_arr)
     fig = plt.figure()
     ax = fig.add_subplot(111)
     ax.scatter(X_embedded[:, 0], X_embedded[:, 1], c=labels, cmap='tab20')
@@ -91,5 +105,5 @@ for word in words:
     if not os.path.exists(im_dir):
         os.mkdir(im_dir)
     plt.savefig(os.path.join(im_dir, '{}-{}.png'.format(word, cluster_type)))
-    with open(cluster_path, 'w') as f:
-        json.dump(cluster_d, f)
+    # with open(cluster_path, 'w') as f:
+    #     json.dump(cluster_d, f)
